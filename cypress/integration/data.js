@@ -18,8 +18,8 @@ export const SELECTOR_SEARCH = "#searchBox";
 export const FIRST_NAME = faker.name.firstName();
 export const LAST_NAME = faker.name.lastName();
 export const EMAIL = faker.internet.email();
-export const AGE = Math.floor(Math.random());
-export const SALARY = Math.floor(Math.random());
+export const AGE = Math.floor(Math.random()* (60 - 18)) + 18;
+export const SALARY = Math.floor(Math.random()* (5000 - 1500)) + 1500;
 export const DEPARTMENT = "department";
 
 export const EDIT_USER_FIRST_NAME = faker.name.firstName();
