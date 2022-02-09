@@ -1,5 +1,6 @@
 /node_modules
 /package-lock.json
-cypress/downloads/
-/cypress/plugins/
-/cypress/support/
+downloads/
+downloads/
+cypress/plugins/
+cypress/support/
