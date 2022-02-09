@@ -1,4 +1,11 @@
 /node_modules
-/cypress/node_modules
-/cypress/plugins
-/cypress/support
+/package-lock.json
+downloads/
+cypress/plugins/
+cypress/support/
+
+
+
+
+
+
