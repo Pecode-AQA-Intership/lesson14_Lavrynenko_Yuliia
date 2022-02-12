@@ -14,7 +14,7 @@ export let selectorPermanentAddress= '#permanentAddress'
 
 export let verifyName = '#name';
 export let verifyEmail = '#email';
-export let verifyCurrentAddress = '#currentAddress';
-export let verifyPermanentAddress = '#permanentAddress';
+export let verifyCurrentAddress = 'p[id="currentAddress"]';
+export let verifyPermanentAddress = 'p[id="permanentAddress"]';
 
 
