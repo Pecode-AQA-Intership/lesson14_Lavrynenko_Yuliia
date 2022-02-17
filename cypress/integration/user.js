@@ -100,18 +100,10 @@ describe('Test fill the form', () => {
 
             cy.get(".rt-tbody").should("include.text", "Legal")
             cy.get(data.SELECTOR_SEARCH).click().clear()
-          })
+          });
 
-        it("Sorting table by salary", () => {
-          cy.contains('.rt-resizable-header-content', 'Salary').click()
-          
-          })
-          
       
-      })
-                  
-              
-            
-          
-        
+      });
+      
 
+     
