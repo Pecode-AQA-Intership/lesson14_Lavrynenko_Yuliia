@@ -36,10 +36,10 @@ describe('Test fill the form', () => {
       .should('have.text', `Email:${data.EMAIL}`)
 
     cy.get(data.verifyCurrentAddress)
-      .should('have.text','')
+      .should('have.text',`Current Address :${data.CURRENT_ADDRESS} `)
 
     cy.get(data.verifyPermanentAddress)
-      .should('have.text','')
+      .should('have.text',`Permananet Address :${data.PERMANENT_ADDRESS}`)
     })
 })
 
