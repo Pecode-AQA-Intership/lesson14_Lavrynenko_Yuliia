@@ -1,4 +1,4 @@
-import * as data from './test_Data.js';
+import * as data from '../fixtures/test_Data.js';
 
 describe('Test fill the form', () => {
   beforeEach(() => {
