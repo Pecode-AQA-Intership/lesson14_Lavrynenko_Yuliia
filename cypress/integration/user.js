@@ -1,4 +1,4 @@
-import * as data from './data.js'
+import * as data from '../fixtures/data.js'
 describe('Test fill the form', () => {
     before(() => {
       
