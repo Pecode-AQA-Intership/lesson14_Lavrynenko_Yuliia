@@ -10,8 +10,6 @@ export const SELECTOR_BIRTH = '#dateOfBirthInput';
 export const SELECTOR_SUBJECTS = '#subjectsContainer';
 export const SELECTOR_CURRENT_ADDRESS = '#currentAddress';
 
-export const SELECTOR_STAGE = '#state .css-1hwfws3';
-export const SELECTOR_CITY = '#city .css-1hwfws3#city .css-1hwfws3';
 export const SELECTOR_GENDER_MALE = '#gender-radio-1';
 export const SELECTOR_GENDER_FEMALE = '#gender-radio-2';
 export const SELECTOR_GENDER_OTHER = '#gender-radio-3';
@@ -22,6 +20,8 @@ export const SELECTOR_SUBMIT_BTN = '#submit';
 export const SELECTOR_HOBBY = '#hobbies-checkbox-1';
 export const SELECTOR_HOBBIES = '#hobbies-checkbox-2';
 export const SELECTOR_CLOSE_BTN = '#closeLargeModal';
+export const SELECTOR_STATE = '#state > div';
+export const SELECTOR_CITY = '#city > div';
 
 export const VARIFY_NAME = 'tr:nth-child(1) td:nth-child(2)';
 export const VARIFY_EMAIL = 'tr:nth-child(2) td:nth-child(2)';
@@ -30,6 +30,7 @@ export const VARIFY_MOBILE = 'tr:nth-child(4) td:nth-child(2)';
 export const VARIFY_BIRTH = 'tr:nth-child(5) td:nth-child(2)';
 export const VARIFY_HOBBY = 'tr:nth-child(7) td:nth-child(2)';
 export const VARIFY_ADDRESS = 'tr:nth-child(9) td:nth-child(2)';
+export const VARIFY_STATE_CITY = 'tr:nth-child(10)  td:nth-child(2)';
 
 export const FIRST_NAME = faker.name.firstName();
 export const LAST_NAME = faker.name.lastName();

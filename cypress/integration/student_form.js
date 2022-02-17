@@ -1,5 +1,6 @@
-import * as data from './data.js'
-describe('Test fill the form', () => {
+import * as data from '../fixtures/data.js'
+
+describe('Test fill the student form', () => {
     before(() => {
       
       cy.visit(data.URL)
@@ -25,9 +26,9 @@ describe('Test fill the form', () => {
       .should('have.value', data.MOBILE_NUMBER)
 
       cy.get(data.SELECTOR_BIRTH).click()
-      let a = cy.get(data.SELECTOR_MONTH).select('June')
-      let b = cy.get(data.SELECTOR_YEAR).select('2000')
-      let c = cy.get(data.SELECTOR_DAY).contains(data.DAY).click()
+      cy.get(data.SELECTOR_MONTH).select('June')
+      cy.get(data.SELECTOR_YEAR).select('2000')
+      cy.get(data.SELECTOR_DAY).contains(data.DAY).click()
 
 
       cy.get(data.SELECTOR_SUBJECTS)
@@ -40,7 +41,9 @@ describe('Test fill the form', () => {
       .should('have.value', data.CURRENT_ADDRESS)
 
       cy.get(data.SELECTOR_SUBMIT_BTN).click()
-
+    })
+    
+    it('Check inputs', () => {
       cy.get(data.VARIFY_NAME)
       .should('contain',data.FIRST_NAME)
       cy.get(data.VARIFY_EMAIL)
@@ -55,7 +58,7 @@ describe('Test fill the form', () => {
      })
 
 
-    describe('Test fill the form', () => {
+describe('Second test fill the student form', () => {
     before(() => {
       
       cy.visit(data.URL)
@@ -80,10 +83,9 @@ describe('Test fill the form', () => {
     .should('have.value', data.MOBILE_NUMBER)
 
     cy.get(data.SELECTOR_BIRTH).click()
-    let a = cy.get(data.SELECTOR_MONTH).select('June')
-    let b = cy.get(data.SELECTOR_YEAR).select('2000')
-    let c = cy.get(data.SELECTOR_DAY).contains(data.DAY).click()
-
+    cy.get(data.SELECTOR_MONTH).select('June')
+    cy.get(data.SELECTOR_YEAR).select('2000')
+    cy.get(data.SELECTOR_DAY).contains(data.DAY).click()
 
     cy.get(data.SELECTOR_SUBJECTS)
     .type(`Hindi{enter}`)
@@ -94,8 +96,15 @@ describe('Test fill the form', () => {
     .type(data.CURRENT_ADDRESS)
     .should('have.value', data.CURRENT_ADDRESS)
 
-    cy.get(data.SELECTOR_SUBMIT_BTN).click()
+    cy.get(data.SELECTOR_STATE).click()
+    cy.get(data.SELECTOR_STATE).find('[tabindex="-1"]').contains("NCR").click();
+    cy.get(data.SELECTOR_CITY).click();
+    cy.get(data.SELECTOR_CITY).find('[tabindex="-1"]').contains("Delhi").click();
 
+    cy.get(data.SELECTOR_SUBMIT_BTN).click({force: true})
+  })
+
+    it('Check inputs', () => {
     cy.get(data.VARIFY_NAME)
     .should('contain',data.FIRST_NAME)
     cy.get(data.VARIFY_EMAIL)
@@ -104,12 +113,14 @@ describe('Test fill the form', () => {
     .should('contain','Other')
     cy.get(data.VARIFY_MOBILE)
     .should('contain',data.MOBILE_NUMBER)
-    
     cy.get(data.VARIFY_HOBBY)
     .should('contain','Reading')
+    cy.get(data.VARIFY_STATE_CITY)
+    .should('contain','NCR Delhi')
     
-    cy.get(data.SELECTOR_CLOSE_BTN).click()
+    cy.get(data.SELECTOR_CLOSE_BTN).click({force: true})
 
-    })
+   
   })
+})
 })
