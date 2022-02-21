@@ -1,9 +1,11 @@
-import * as data from './test_Data.js';
+import Url from '../fixtures/cypress.json';
+import * as data from '../fixtures/test_Data.js';
+
 
 describe('Test fill the form', () => {
   beforeEach(() => {
     
-    cy.visit(data.URL)
+    cy.visit(Url.baseUrl_14)
   })
   it('Check of valid input', () => {
     //enter full name field 
@@ -36,10 +38,10 @@ describe('Test fill the form', () => {
       .should('have.text', `Email:${data.EMAIL}`)
 
     cy.get(data.verifyCurrentAddress)
-      .should('have.text','')
+      .should('have.text',`Current Address :${data.CURRENT_ADDRESS} `)
 
     cy.get(data.verifyPermanentAddress)
-      .should('have.text','')
+      .should('have.text',`Permananet Address :${data.PERMANENT_ADDRESS}`)
     })
 })
 
