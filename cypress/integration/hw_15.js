@@ -1,8 +1,9 @@
 import * as data from '../fixtures/data.js'
+import Url from '../fixtures/cypress.json';
 describe('Test fill the form', () => {
     before(() => {
       
-      cy.visit(data.URL)
+      cy.visit(Url.baseUrl_15)
     })
     it('Registration Form', () => {
         cy.get(data.SELECTOR_RECORD_BUTTON).click();

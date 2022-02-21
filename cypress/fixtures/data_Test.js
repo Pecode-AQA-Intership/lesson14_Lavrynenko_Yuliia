@@ -2,9 +2,6 @@ let faker = require('faker');
 
 export const URL = 'https://demoqa.com/automation-practice-form';
 
-export const SELECTOR_FIRST_NAME = '#firstName';
-export const SELECTOR_LAST_NAME = '#lastName';
-export const SELECTOR_EMAIL = '#userEmail';
 export const SELECTOR_MOBILE_NUMBER = '#userNumber';
 export const SELECTOR_BIRTH = '#dateOfBirthInput';
 export const SELECTOR_SUBJECTS = '#subjectsContainer';
